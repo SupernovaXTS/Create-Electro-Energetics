@@ -29,9 +29,9 @@ public class CEEMixinPlugin implements IMixinConfigPlugin {
 
         // has to be disabled because youer does something so this mixin fails
         if (mixinClassName.equals("com.george_vi.electroenergetics.mixins.LivingEntityMixin") &&
-                LoadingModList.get().getModFileById("youer") != null)
+                (LoadingModList.get().getModFileById("youer") != null) || (LoadingModList.get().getModFileById("kilt") != null)) 
             return false;
-
+        
         return true;
     }
 
